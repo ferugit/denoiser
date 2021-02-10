@@ -111,6 +111,10 @@ def enhance(args, model=None, local_out_dir=None):
     # Load model
     if not model:
         model = pretrained.get_model(args).to(args.device)
+    
+    # SAVE state dict model: fer
+    #torch.save(model.state_dict(), '/disk2/data/fernandol/speech-enhacement/models/pretrained_models/denoiser/master64.pt')
+
     model.eval()
     if local_out_dir:
         out_dir = local_out_dir

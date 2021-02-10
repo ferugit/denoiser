@@ -66,7 +66,7 @@ def run(args):
     torch.manual_seed(args.seed)
     if torch.cuda.is_available():
         model.cuda()
-
+    print(model)
     # optimizer
     if args.optim == "adam":
         optimizer = torch.optim.Adam(model.parameters(), lr=args.lr, betas=(0.9, args.beta2))

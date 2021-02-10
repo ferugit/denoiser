@@ -18,5 +18,7 @@ python train.py \
   stft_loss=True \
   segment=4.5 \
   stride=0.5 \
-  ddp=1
+  ddp=1 \
+  batch_size=12 \
+  sample_rate=48000
 

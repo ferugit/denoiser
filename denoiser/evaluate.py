@@ -104,8 +104,9 @@ def get_pesq(ref_sig, out_sig, sr):
         PESQ
     """
     pesq_val = 0
-    for i in range(len(ref_sig)):
-        pesq_val += pesq(sr, ref_sig[i], out_sig[i], 'wb')
+    # FER: uncomment
+    #for i in range(len(ref_sig)):
+    #    pesq_val += pesq(sr, ref_sig[i], out_sig[i], 'wb')
     return pesq_val
 
 
